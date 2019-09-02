@@ -49,8 +49,9 @@ public final class QueryUtils {
                 Date dateObject = new Date(timeinmilli);
                 SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM DD, yyyy");
                 String dateToDisplay = dateFormatter.format(dateObject);
+                String url = properties.getString("url");
 
-                Earthquake earthquake=new Earthquake(magnitude,location,timeinmilli);
+                Earthquake earthquake=new Earthquake(magnitude,location,timeinmilli,url);
                  earthquakes.add(earthquake);
 
 
