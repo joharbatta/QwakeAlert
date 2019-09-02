@@ -4,16 +4,19 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EarthquakeAdapter extends ArrayList<Earthquake> {
+public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
+
 
     public EarthquakeAdapter(Context context, List<Earthquake> earthquakes) {
-        super(context , 0, earthquakes);
+        super(context,R.layout.earthquake_list_item, earthquakes);
     }
+
 
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
